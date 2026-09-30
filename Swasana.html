@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kasir Warung Kopi Swasana</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kaushan+Script&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <main>
+    <header>
+      <div class="logo"><small>Warung Kopi</small><b>Swasana</b></div>
+      <input id="q" type="search" placeholder="Cari menu…" aria-label="Cari menu">
+      <button id="setq" class="ghost">Atur QRIS</button>
+      <button id="hist" class="ghost">Riwayat hari ini</button>
+    </header>
+    <nav id="tabs" aria-label="Kategori menu"></nav>
+    <h1 id="ttl"></h1>
+    <section id="grid"></section>
+    <footer class="bar"><span>PESAN SEKARANG!</span><p>Sosial Media Official : warkopswasana</p><em id="ver"></em></footer>
+  </main>
+
+  <aside id="cart">
+    <div class="ah"><h2>Pesanan</h2><button id="cls" class="ghost">Tutup</button></div>
+    <div class="seg" id="type">
+      <button class="on" data-t="Makan di sini">Makan di sini</button>
+      <button data-t="Bawa pulang">Bawa pulang</button>
+    </div>
+    <input id="who" placeholder="Nama / No. meja" maxlength="30">
+    <ul id="lines"></ul>
+    <div class="sum">
+      <label>Diskon (Rp)<input id="disc" type="number" min="0" step="500" placeholder="0"></label>
+      <div><span>Subtotal</span><b id="sub">Rp 0</b></div>
+      <div class="tot"><span>Total</span><b id="tot">Rp 0</b></div>
+    </div>
+    <div class="seg" id="pm">
+      <button class="on" data-m="Tunai">Tunai</button>
+      <button data-m="QRIS">QRIS</button>
+      <button data-m="Transfer">Transfer</button>
+    </div>
+    <div id="cashbox">
+      <input id="cash" type="number" min="0" placeholder="Uang diterima">
+      <div class="qk">
+        <button data-a="0">Uang pas</button><button data-a="20000">20K</button>
+        <button data-a="50000">50K</button><button data-a="100000">100K</button>
+      </div>
+      <div class="chg"><span>Kembalian</span><b id="chg">Rp 0</b></div>
+    </div>
+    <div class="acts">
+      <button id="rst" class="ghost">Kosongkan</button>
+      <button id="pay" class="go" disabled>Bayar</button>
+    </div>
+  </aside>
+</div>
+<button id="mob"><span id="mc">0 item</span><b id="mt">Rp 0</b></button>
+<dialog id="dlg"></dialog>
+<script src="script.js"></script>
+</body>
+</html>
